@@ -4,7 +4,7 @@ class TaskList {
   }
 
   createNewTask(description) {
-    const newTask = new Task(description);
+    const newTask = new TaskListItem(description);
     this.tasks.push(newTask);
   }
 
