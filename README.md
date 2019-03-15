@@ -1,4 +1,4 @@
-# TaskLister Lite™️
+# Object Oriented TaskLister™️
 
 ## Hello and Welcome to TaskLister Lite™️
 
@@ -13,15 +13,7 @@ Instead of relying on unit tests, this lab is deliverable driven. You will be re
 
 1. Fork and clone this repository
 2. Open `index.html` in Chrome (Tip: you can use `open index.html` in bash and, as long as Chrome is your default application for opening `.html` files, it will automatically open the file)
-3. Put you JavaScript knowledge to the test and work your way through the deliverables
-
-
-### Structuring Your Code:
-
-You've been provided with three JavaScript starter files: oo_index, task and taskList. As you build larger JS projects, structuring and separating your code will become more necessary. For this project we suggest implementing MVC architecture.
-
-Your task file is your model. It is responsible for creating tasks and assigning attributes to them. Your view is your index.html. It contains the HTML template for our single-page application. The controller transfers information between the model and the view. TaskList is your controller. It puts information onto the DOM and can read information from it. Just like in Rails, your controller can read params and instantiate new objects which it will then render on the DOM.
-
+3. Put you JavaScript knowledge to the test and work your way through the deliverables, using the Structure suggested below.
 
 ### Deliverables:
 
@@ -32,9 +24,17 @@ Your task file is your model. It is responsible for creating tasks and assigning
 **Note:** [While the example][example] shows one working application of TaskLister Lite™️, yours can (and is encouraged to!) look however you like.
 
 
-### Stretch Deliverables:
+### Structuring Your Code:
 
-If you finish early, try to implement one or more of the following:
+You've been provided with three JavaScript starter files: index, TaskList and TaskListItem. As you build larger JS projects, structuring and separating your code will become more necessary.
+
+For this project, we have two classes, each one representing a component of our UI. Each component should have some state and behavior associated with our UI.
+
+1. Our `TaskListItem` should keep track of a description and render an `li` displaying that description, as well as a
+2. Our `TaskList` should keep track of a list of `TaskListItems` and render an unordered list of each TaskListItem.
+
+
+### Stretch Deliverables:
 
 - A delete function that will remove tasks from your list
 - A priority value selected from a dropdown that is used to determine the color of the text in the list (e.g. red for high priority, yellow for medium, green for low)
