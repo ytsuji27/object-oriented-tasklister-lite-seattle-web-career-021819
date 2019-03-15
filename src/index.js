@@ -1,4 +1,3 @@
-// OO solution
 document.addEventListener("DOMContentLoaded", () => {
   // initialize taskList class
   const taskList = new TaskList();
@@ -10,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const newTaskPriority = document.getElementById("new-task-priority");
 
   //ul where new tasks will live on the DOM
-  const taskUl = document.getElementById("tasks");
+  const listContainer = document.getElementById("list");
 
-  const renderApp = () => (taskUl.innerHTML = taskList.renderTasks());
+  const renderApp = () => (listContainer.innerHTML = taskList.render());
   //attach event listeners
 
   newTaskForm.addEventListener("submit", (e) => {
@@ -23,10 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     renderApp();
   });
 
-  taskUl.addEventListener("click", (e) => {
+  listContainer.addEventListener("click", (e) => {
     if (e.target.nodeName === "BUTTON") {
       taskList.deleteTask(e.target.dataset.description);
       renderApp();
     }
   });
+
+  renderApp()
 });

@@ -8,8 +8,15 @@ class TaskList {
     this.tasks.push(newTask);
   }
 
-  renderTasks() {
-    return this.tasks.map((task) => task.render()).join("");
+  render() {
+    return (
+      `
+      <ul id="tasks">
+        <h2>My Todos</h2>
+        ${ this.tasks.map((task) => task.render()).join("") }
+      </ul>
+      `
+    )
   }
 
   deleteTask(description) {
